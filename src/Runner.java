@@ -6,10 +6,10 @@ import java.io.IOException;
 public class Runner {
     public static void main(String[] wut){
         ScanLogs sLogs = new ScanLogs();
-
+        McsData sData = new McsData();
         McsCounter counter = new McsCounter();
         try {
-            sLogs.run("UniLib_2Oct.csv");
+            sData.run("UniLib_2Oct.csv");
         } catch (IOException e) {
             e.printStackTrace();
         }

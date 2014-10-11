@@ -10,7 +10,7 @@ import java.util.HashMap;
  */
 public class McsCounter {
 
-    HashMap<Double, Integer> counter = new HashMap<Double, Integer>();
+    HashMap<String, Integer> counter = new HashMap<String, Integer>();
 
     public McsCounter() {
 
@@ -19,19 +19,20 @@ public class McsCounter {
     public void run(String fileName) throws IOException {
         CSVReader reader = openFile(fileName);
         String[] nextLine;
+
         while ((nextLine = reader.readNext()) != null) {
-            if (!nextLine[5].equals("MCS Index") && nextLine[5].contains("Beacon") && nextLine[12].equals("False")) {
-                Double tx_rate = Double.parseDouble(nextLine[7]);
-                if (this.counter.containsKey(tx_rate)) {
-                    int oldValue = this.counter.get(tx_rate);
-                    counter.put(tx_rate, oldValue + 1);
+            if (!nextLine[10].isEmpty() && !nextLine[9].equals("MCS Index")) {
+                String channel = nextLine[10];
+                if (this.counter.containsKey(channel)) {
+                    int oldValue = this.counter.get(channel);
+                    counter.put(channel, oldValue + 1);
                 } else {
-                    counter.put(tx_rate, 1);
+                    counter.put(channel, 1);
                 }
             }
         }
-        for (double d : counter.keySet()) {
-            System.out.println(d + ": " + counter.get(d));
+        for (String s : counter.keySet()) {
+            System.out.println(s + " " + counter.get(s));
         }
 
     }

@@ -24,45 +24,45 @@ public class ScanLogs {
                 int second = ((int) Double.parseDouble(nextLine[1]));
                 int length = Integer.parseInt(nextLine[4]);
 
-                if (nextLine[5].contains("Ack") && (nextLine[7].equals("6.0"))) {
+                if (nextLine[5].contains("Ack") && (nextLine[7].equals("6.0") || nextLine[7].equals("9.0"))) {
                     addValue(second, 1);
-                } else if (nextLine[5].contains("Ack") && (nextLine[7].equals("12.0"))) {
+                } else if (nextLine[5].contains("Ack") && (nextLine[7].equals("12.0") || nextLine[7].equals("18.0"))) {
                     addValue(second, 2);
-                } else if (nextLine[5].contains("Ack") && (nextLine[7].equals("24.0"))) {
+                } else if (nextLine[5].contains("Ack") && (nextLine[7].equals("24.0") || nextLine[7].equals("36.0"))) {
                     addValue(second, 3);
-                } else if (nextLine[5].contains("Ack") && (nextLine[7].equals("54.0"))) {
+                } else if (nextLine[5].contains("Ack") && (nextLine[7].equals("54.0") || nextLine[7].equals("48.0"))) {
                     addValue(second, 4);
-                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("6.0"))) {
+                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("6.0") || nextLine[7].equals("9.0"))) {
                     addValue(second, 5);
-                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("12.0"))) {
+                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("12.0") || nextLine[7].equals("18.0"))) {
                     addValue(second, 6);
-                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("24.0"))) {
+                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("24.0") || nextLine[7].equals("36.0"))) {
                     addValue(second, 7);
-                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("54.0"))) {
+                } else if (nextLine[5].contains("Clear") && (nextLine[7].equals("54.0") || nextLine[7].equals("48.0"))) {
                     addValue(second, 8);
-                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("6.0"))) {
+                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("6.0") || nextLine[7].equals("9.0"))) {
                     addValue(second, 9);
-                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("12.0"))) {
+                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("12.0") || nextLine[7].equals("18.0"))) {
                     addValue(second, 10);
-                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("24.0"))) {
+                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("24.0") || nextLine[7].equals("36.0"))) {
                     addValue(second, 11);
-                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("54.0"))) {
+                } else if (nextLine[5].contains("Request") && (nextLine[7].equals("54.0") || nextLine[7].equals("48.0"))) {
                     addValue(second, 12);
-                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("6.0"))) {
+                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("6.0") || nextLine[7].equals("9.0"))) {
                     addValue(second, 13);
-                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("12.0"))) {
+                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("12.0") || nextLine[7].equals("18.0"))) {
                     addValue(second, 14);
-                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("24.0"))) {
+                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("24.0") || nextLine[7].equals("36.0"))) {
                     addValue(second, 15);
-                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("54.0"))) {
+                } else if (nextLine[5].contains("Beacon") && (nextLine[7].equals("54.0") || nextLine[7].equals("48.0"))) {
                     addValue(second, 16);
-                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("6.0"))) {
+                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("6.0") || nextLine[7].equals("9.0"))) {
                     addValue(second, 17, length);
-                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("12.0"))) {
+                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("12.0") || nextLine[7].equals("18.0"))) {
                     addValue(second, 19, length);
-                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("24.0"))) {
+                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("24.0") || nextLine[7].equals("36.0"))) {
                     addValue(second, 21, length);
-                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("54.0"))) {
+                } else if (nextLine[5].contains("Data") && (nextLine[7].equals("54.0") || nextLine[7].equals("48.0"))) {
                     addValue(second, 23, length);
                 }
             }
