@@ -1,0 +1,12 @@
+from setuptools import setup
+
+setup(name='Analye That',
+      version='1.0',
+      description='OpenShift App',
+      author='Your Name',
+      author_email='example@example.com',
+      url='http://www.python.org/sigs/distutils-sig/',
+      install_requires=['Flask==0.10.1',
+                        'Flask-SQLAlchemy==2.0',
+                        'markdown'],
+     )

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+<div id="main" class="container">
+    <h2>Connected WiFi List</h2>
+    <table class="table table-hover">
+      <tr>
+        <th>#
+        <th>Sender MAC
+        <th>Connected WiFi SSID 
+        <th>RSSI
+        <th>Link Speed
+        <th>Net ID
+        <th>Latitude
+        <th>Longitude
+        <th>Date and Time Added
+      </tr>
+      {%- for wif in wifi %}
+      <tr>
+          <td>{{ wif.id }} </td>
+          <td>{{ wif.mac }} </td>
+          <td>{{ wif.ssid }} </td>
+          <td>{{ wif.rssi }} </td>
+          <td>{{ wif.lspeed }} </td>
+          <td>{{ wif.netid }}</td>
+          <td>{{ wif.lat }}</td>
+          <td>{{ wif.lon }} </td>
+          <td>{{ wif.added_date.strftime('%Y-%m-%d %H:%M') }}</td>
+      {%- endfor %}
+    </table>
+    <p>
+ 
+</div>
+{% endblock %}

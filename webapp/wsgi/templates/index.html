@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+<div id="main" class="container">
+    <h2> CS660 Modern Wireless Technology Project </h2>
+        <a href="{{ url_for('listWifi') }}" class="btn btn-medium btn-default">WiFi Connections</a>
+        <a href="{{ url_for('listScan') }}" class="btn btn-medium btn-default">WiFi Scans</a>
+</div>
+{% endblock %}
